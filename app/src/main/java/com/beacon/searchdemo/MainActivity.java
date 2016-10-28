@@ -19,7 +19,7 @@ import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
     public static final String DATA_PATH = Environment
-            .getExternalStorageDirectory().toString() + "/SimpleAndroidOCR/";
+            .getExternalStorageDirectory().toString() + "/SimpleAndroidOCR";
 
     private static final String TAG = "MainActivity.java";
 
@@ -64,7 +64,9 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "resultCode: " + resultCode);
 
         if (resultCode == -1) {
-            OCR.regcognize(mPath);
+            OCR.DATA_PATH = DATA_PATH;
+            String result = OCR.regcognize(mPath, "eng");
+            Log.v(TAG, "recognized text: " + result);
         } else {
             Log.v(TAG, "User cancelled");
         }
