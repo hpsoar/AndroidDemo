@@ -19,7 +19,7 @@ import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
     public static final String DATA_PATH = Environment
-            .getExternalStorageDirectory().toString() + "/SimpleAndroidOCR";
+            .getExternalStorageDirectory().toString() + "/";
 
     private static final String TAG = "MainActivity.java";
 

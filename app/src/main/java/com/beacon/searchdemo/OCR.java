@@ -8,6 +8,9 @@ import android.util.Log;
 
 import com.googlecode.tesseract.android.TessBaseAPI;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
@@ -56,6 +59,12 @@ public class OCR {
     private static Bitmap loadImage(String path) {
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inSampleSize = 4;
+        options.inJustDecodeBounds = false;
+
+        File file = new File(path);
+        if (!file.exists()) {
+            Log.v(TAG, "file doesn't exists: " + path);
+        }
 
         Bitmap bitmap = BitmapFactory.decodeFile(path, options);
 

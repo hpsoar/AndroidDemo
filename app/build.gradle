@@ -24,6 +24,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:design:23.4.0'
-    //compile 'com.lapism:searchview:3.8'
+    //compile 'com.lapism:searchview:3.6'
+    compile 'com.github.arimorty:floatingsearchview:2.0.3'
     compile 'com.rmtheis:tess-two:6.0.4'
+    compile 'me.iwf.photopicker:PhotoPicker:0.9.0@aar'
 }
